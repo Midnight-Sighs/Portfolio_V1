@@ -9,25 +9,30 @@ html{
 body {
     display: grid;
     grid-template-areas:
-    "top top"
-    "nav body";
-    grid-template-columns: 30vw 1fr;
-    grid-template-rows: 15vw 1fr;
+    "topHead topHead"
+    "nav bodyMain";
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 25% 1fr;
+    grid-gap: 5px;
 }
 
-#top{
-    grid-area: top;
+#topHead{
+    grid-area: topHead;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-variant: small-caps;
     color: white;
-    font-size: 8vw;
+    text-shadow: 2px 2px rgba(0, 245, 245, 0.541);
+    font-size: 5vw;
     padding: 10px;
+    margin: 20px;
     text-align:center;
+    border-bottom:teal solid 10px;
 }
 
 #nav{
     grid-area: nav;
 }
+
 #nav .button{
     position: relative;
     text-align: center;
@@ -48,5 +53,59 @@ body {
 }
 
 #bodyMain{
-    grid-area: body;
+    grid-area: bodyMain;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+    font-size: 16;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
+    overflow-y:scroll;
+    height: 400px;
+}
+
+#bodyMain .home{
+    margin: 30px;
+    padding: 30px;
+    height: 300 px;
+    width: auto;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,155,158,0.4182715322457108) 100%);
+    border: solid 3px teal;
+    font-size: large;
+}
+
+#bodyMain .about{
+    margin:25px;
+    padding:15px;
+    height:auto;
+    width: auto;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,155,158,0.4182715322457108) 100%);
+    border: solid 3px teal;
+    text-align:justify;
+}
+
+#bodyMain .about h1{
+    color:white;
+    text-shadow:2px 2px rgba(0,0,0, .5);
+    text-align: center;
+}
+
+#bodyMain .about img{
+    float: right;
+    border: dotted teal 2px;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+.otherButton{
+    background-image: url(../images/buttons/buttonBlue.png);
+    border-radius: 20%;
+    height:30px;
+    width:150px;
+    float:center;
+    color:white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
 }
