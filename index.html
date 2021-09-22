@@ -24,26 +24,28 @@
             <div class="center">About Me</div></a>
         </div>
         <div class="button">
+            <a href="#project">
             <img src ="images/buttons/buttonThree.png" alt="abstract paint splotches">
-            <div class="center">Projects</div>
+            <div class="center">Projects</div></a>
         </div>
         <div class="button">
             <img src ="images/buttons/buttonOne.png" alt="abstract red paint splotches">
-            <div class="center">Contact</div>
+            <div class="center">Contact Me</div>
         </div>
     </div>
     <div id = "bodyMain">
+        <p id ="home"></p>
         <div class = "home">
-            <p id ="home"></p>
-            <p>Hello and welcome to my software development portfolio page.  Here you will find the projects that I've done and my personal notes about them, including what they taught me.</p>
+            <p>Hello and welcome to my software development portfolio page.  Here you will find the projects that I've done and my personal notes about them, including what they taught me.</p>  
+            <p>Included on the cards for the projects will be their original completion date for reference.  I do plan on changing (and already have changed) some of my repos since uploading.  Scroll down or select "projects" from the navigation on the left.</p>
             <p>All images on this page and used to create it are from Unsplash and have been edited by me to be the colors and dimensions I want them to be.</p>
             <p>While I am a jack of all trades, this page will be focused on my software development journey.  Links to anything else will be in my "about me" section.  </p>
         </div>
     
+        <p id ="about"></p>
         <div class = "about">
             <img src = "images/portrait.jpg">
             <h1>About Midnight</h1>
-            <p id ="about"></p>
             <p>Although I said this page was for my software development, I am much more than that. I am a jack-of-all-trades artist, a gamer (table-top and digital), and a mom of two boys.  I am diverse and fun and I truly believe that we have to make our moments fun and I try to bring fun into things any way that I can, even if it's small.</p>
             <p>I go by Midnight because I hate my real name (it's Sierra, for anyone who truly wants to use it) because I feel like it's never suited me.  In the art world, I've also gone by the alias of Arreis-Kurai.</p>
             <p>Since you're taking the time to read about me, I may as well reward you (tempt you?) with options to get to know me even better so I'll add my linkTree, where you can find the homes of my traditional art, my miniature painting, my Etsy life, and more.</p>
@@ -53,9 +55,69 @@
                 </form>
         </div>
         
+    <div id="project">
+        <button class="projects">RPSLS</button>
+                <div class="desc">
+                    <p>Originally completely September 14th, 2021</p>
+                    <p></p>
+                    <p></p>
+                    <form action="https://github.com/Midnight-Sighs/RPSLS" method="get" target="_blank">
+                        <button type="submit" class="otherButton">Repo</button>
+                    </form>
+                </div>
+
+        <button class="projects">Robots vs Dinosaurs</button>
+                <div class="desc">
+                    <p>Originally completely September 11th, 2021; V2 done (for now) September 16th</p>
+                    <p></p>
+                    <p></p>
+                    <form action="https://github.com/Midnight-Sighs/Robots_VS_Dinosaurs.git" method="get" target="_blank">
+                        <button type="submit" class="otherButton">Repo</button>
+                    </form>
+                    <form action="https://github.com/Midnight-Sighs/Robots_VS_Dinosaurs.V2.git" method="get" target="_blank">
+                        <button type="submit" class="otherButton">Repo V2</button>
+                    </form>
+                </div>
+
+            <button class="projects">Most Wanted: Javascript</button>
+                <div class="desc">
+                    <p>Originally completed September 7th, 2021</p>
+                    <p>This was our first partner project and I worked in a pair.  It was a different perspective on working on a project, that's for sure.</p>
+                    <p>Most Wanted is written entirely in javascript and the point was to be able to navigate and find a person in a "database" (a seperate JS file full of mock people) and narrow them down to one by certain criteria entered by the users.</p>
+                    <form action="https://github.com/Midnight-Sighs/MostWanted.git" method="get" target="_blank">
+                        <button type="submit" class="otherButton">Repo</button>
+                    </form>
+                </div>
+
+            <button class="projects">Day Trip Generator: Javascript, HTML, CSS</button>
+                <div class="desc">
+                    <p>Originally completely August 27th, 2021</p>
+                    <p>This project was the first one at Dev Code Camp and we started it on our fourth day.  I did not feel as overwhelmed with this as I thought I would and I had a ton of fun making it and the random elements to it.</p>
+                    <p>The HTML and CSS was not a required part of this project but something I wanted to learn.  So here was my first real experience with all three of the languages used here.</p>
+                    <form action="https://github.com/Midnight-Sighs/Day-Trip-Project" method="get" target="_blank">
+                        <button type="submit" class="otherButton">Repo</button>
+                    </form>
+                </div>
+        </div>
     </div>
 
 
     
 </body>
+<script>
+    var projects = document.getElementsByClassName("projects");
+    var i;
+        
+    for (i = 0; i < projects.length; i++) {
+        projects[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+        });
+    }
+</script>
 </html>

@@ -6,7 +6,7 @@ html{
     background-position: fixed;
 }
 
-body {
+body {/*setting up the grid*/
     display: grid;
     grid-template-areas:
     "topHead topHead"
@@ -44,7 +44,7 @@ body {
     margin:10px;
 }
 
-#nav .center{
+#nav .center{/*text for buttons*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,7 +63,7 @@ body {
     overflow-y:scroll;
     height: 400px;
 }
-#home{
+#home{/*to create ids for hyperlinks*/
 
 }
 #bodyMain .home{
@@ -81,7 +81,7 @@ body {
 }
 
 #bodyMain .about{
-    margin:25px;
+    margin:30px;
     padding:15px;
     height:auto;
     width: auto;
@@ -105,12 +105,59 @@ body {
     margin: 10px;
 }
 
-.otherButton{
+#project{
+    margin: 30px;
+    padding:15px;
+    height:auto;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,155,158,0.4182715322457108) 100%);
+    border: solid 3px teal;
+    text-align:justify;
+}
+#bodyMain .projects{
+    margin-top:10px;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+    font-size: 16;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+.projects {/*labels*/
+    margin:30;
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px rgb(0, 53, 53);
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+    width: 100%;
+}
+  
+  .active, .projects:hover {
+    background-color: teal;
+  }
+  
+  .desc {/*accordian dropped down*/
+    margin:30;
+    padding: 0 18px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.514);
+    border: solid 3px black;
+    overflow: hidden;
+    box-shadow: black;
+}
+
+.otherButton{/*the button for everything but the nav*/
     background-image: url(../images/buttons/buttonBlue.png);
     border-radius: 20%;
     height:30px;
     width:150px;
     float:center;
+    margin-inline: 35%;
     color:white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
 }
