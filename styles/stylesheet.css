@@ -5,6 +5,17 @@ html{
     background-size: cover;
     background-position: fixed;
 }
+a:link{
+    color: rgb(0, 223, 223)
+}
+
+a:visited{
+    color: rgb(0, 70, 70)
+}
+
+a:hover{
+    color: white;
+}
 
 body {/*setting up the grid*/
     display: grid;
@@ -91,9 +102,9 @@ body {/*setting up the grid*/
     text-align:justify;
 }
 
-#bodyMain .about h1{
+#bodyMain .about, .contact, .home h1{
     color:white;
-    text-shadow:2px 2px rgba(0,0,0, .5);
+    text-shadow:5px 5px rgba(0,0,0, .5);
     text-align: center;
 }
 
@@ -104,6 +115,22 @@ body {/*setting up the grid*/
     height: auto;
     margin: 10px;
 }
+
+#contactMe{
+
+}
+
+#bodyMain .contact{
+    margin:30px;
+    padding:15px;
+    height:auto;
+    width: auto;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,155,158,0.4182715322457108) 100%);
+    border: solid 3px teal;
+    text-align:center;
+}
+
 
 #project{
     margin: 30px;
