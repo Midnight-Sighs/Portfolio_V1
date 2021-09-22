@@ -1,7 +1,8 @@
 html{
     background: black;
     background-image:url(../images/backgroundImage.png);
-    background-size: contain;
+    background-position: center;
+    background-size:cover;
 }
 
 
@@ -11,12 +12,17 @@ body {/*setting up the grid*/
     "topHead topHead"
     "nav bodyMain";
     grid-template-columns: 10% 1fr;
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: 5% 1fr;
     grid-gap: 5px;
 }
 
 #topHead{
     border:none;
+}
+
+#nav{
+    position:fixed;
+    margin-top: 100px;
 }
 
 #nav .button{
@@ -29,5 +35,5 @@ body {/*setting up the grid*/
 }
 
 #bodyMain{
-    height: 800px;
+    height: fit-content;
 }
