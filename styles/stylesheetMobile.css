@@ -1,0 +1,33 @@
+html{
+    background: black;
+    background-image:url(../images/backgroundImage.png);
+    background-size: contain;
+}
+
+
+body {/*setting up the grid*/
+    display: grid;
+    grid-template-areas:
+    "topHead topHead"
+    "nav bodyMain";
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-gap: 5px;
+}
+
+#topHead{
+    border:none;
+}
+
+#nav .button{
+    text-align: center;
+    max-width: 50px;
+}
+#nav .button img{
+    max-width:75px;
+    margin: 0px;
+}
+
+#bodyMain{
+    height: 800px;
+}
