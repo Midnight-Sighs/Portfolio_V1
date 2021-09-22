@@ -1,11 +1,10 @@
-
-
 html{
     background: linear-gradient(black, rgb(131, 0, 0));
     background-image: url(../images/backgroundImage.png);
     background-size: cover;
     background-position: fixed;
 }
+
 a:link{
     color: rgb(0, 223, 223)
 }
@@ -24,7 +23,7 @@ body {/*setting up the grid*/
     "topHead topHead"
     "nav bodyMain";
     grid-template-columns: 30% 1fr;
-    grid-template-rows: 25% 1fr;
+    grid-template-rows: 10% auto;
     grid-gap: 5px;
 }
 
@@ -38,11 +37,12 @@ body {/*setting up the grid*/
     padding: 10px;
     margin: 20px;
     text-align:center;
-    border-bottom:teal solid 10px;
 }
 
 #nav{
     grid-area: nav;
+    position: fixed;
+    margin-top: 20%;
 }
 
 #nav .button{
@@ -72,12 +72,12 @@ body {/*setting up the grid*/
     font-size: 16;
     color: white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
-    overflow-y:scroll;
-    height: 400px;
+    height: 75%;
 }
 #home{/*to create ids for hyperlinks*/
 
 }
+
 #bodyMain .home{
     margin: 30px;
     padding: 30px;
@@ -88,6 +88,7 @@ body {/*setting up the grid*/
     border: solid 3px teal;
     font-size: large;
 }
+
 #about{
 
 }
@@ -103,7 +104,7 @@ body {/*setting up the grid*/
     text-align:justify;
 }
 
-#bodyMain .about, .contact, .home h1{
+#bodyMain .about, .contact, .home, #project h1{
     color:white;
     text-shadow:5px 5px rgba(0,0,0, .5);
     text-align: center;
@@ -112,7 +113,8 @@ body {/*setting up the grid*/
 #bodyMain .about img{
     float: right;
     border: dotted teal 2px;
-    width: 175px;
+    width: 25%;
+    max-width: 100px;
     height: auto;
     margin: 10px;
 }
@@ -142,6 +144,7 @@ body {/*setting up the grid*/
     border: solid 3px teal;
     text-align:justify;
 }
+
 #bodyMain .projects{
     margin-top:10px;
     position: relative;
